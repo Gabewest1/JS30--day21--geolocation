@@ -9,17 +9,22 @@ const defaultData = {
     }
 }
 
-navigator.geolocation.getCurrentPosition((data = defaultData) => {
+navigator.geolocation.getCurrentPosition(updateCompassView, updateCompassView, {timeout: 5000})
+
+function updateCompassView(data) {
     console.log(data)
     console.log("AYYYYY LMOA")
+    if (!data.coords) {
+        data = defaultData
+    }
+    
     let { latitude, longitude, heading } = data.coords
 
     heading = heading | Math.floor(Math.random() * 360)
 
     speedometer.textContent = `Lat: ${ formatCoordinate(latitude) }, Long: ${ formatCoordinate(longitude) }`
     compassPointer.style.transform = `rotate(${ heading }deg)`
-}, (err) => console.log(err), {timeout: 5000})
-
+}
 function formatCoordinate(coordinate) {
     coordinate = String(coordinate)
     const hasDecimal = decimalIndex = coordinate.indexOf(".")

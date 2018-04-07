@@ -4,15 +4,18 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
+    background: silver;
+    font-family: helvetica;
 }
 
 .compass, .directions, .inner {
     border-radius: 50%;
+    color: #aaaad2;
 }
 .compass {
     background: navajowhite;
     position: relative;
-    padding: 20px;
+    padding: 22px;
 }
 
 .inner {
@@ -20,15 +23,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 .img {
     width: 100px;
-    height: 100px;    
+    height: 100px;
+    transition: all .2s ease-in-out;
 }
 
 .speed {
     text-align: center;
+    color: #efefef;
 }
 
 .directions {
@@ -45,24 +51,24 @@ body {
 
 .direction:nth-child(1) {
     left: 50%;
-    top: 0%;
+    top: 2%;
     transform: translateX(-50%);
 }
 
 .direction:nth-child(2) {
-    right: 0%;
+    right: 4%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .direction:nth-child(3) {
     left: 50%;
-    bottom: 0;
+    bottom: 1%;
     transform: translateX(-50%);
 }
 
 .direction:nth-child(4) {
-    left: 0%;
+    left: 2%;
     top: 50%;
     transform: translateY(-50%);
 }
