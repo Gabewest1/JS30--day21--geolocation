@@ -5,3 +5,64 @@ body {
     justify-content: center;
     height: 100%;
 }
+
+.compass, .directions, .inner {
+    border-radius: 50%;
+}
+.compass {
+    background: navajowhite;
+    position: relative;
+    padding: 20px;
+}
+
+.inner {
+    background: silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    width: 100px;
+    height: 100px;    
+}
+
+.speed {
+    text-align: center;
+}
+
+.directions {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.direction {
+    position: absolute;
+}
+
+.direction:nth-child(1) {
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+}
+
+.direction:nth-child(2) {
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.direction:nth-child(3) {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.direction:nth-child(4) {
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
